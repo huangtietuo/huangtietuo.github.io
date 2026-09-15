@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/home/geek — 个人主页</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scanline"></div>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="prompt">$</span> whoami
+        </div>
+        <div class="nav-links">
+            <a href="#about">./about</a>
+            <a href="#projects">./projects</a>
+            <a href="#skills">./skills</a>
+            <a href="#contact">./contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">geek@home: ~</span>
+            </div>
+            <div class="terminal-body">
+                <div class="line"><span class="prompt">geek@home</span>:<span class="path">~</span>$ cat welcome.txt</div>
+                <div class="line">
+                    <pre class="ascii-art">
+   ██████╗ ███████╗██╗  ██╗
+  ██╔════╝ ██╔════╝██║  ██║
+  ██║  ███╗█████╗  ███████║
+  ██║   ██║██╔══╝  ██╔══██║
+  ╚██████╔╝███████╗██║  ██║
+   ╚═════╝ ╚══════╝╚═╝  ╚═╝
+                    </pre>
+                </div>
+                <div class="line"><span class="prompt">geek@home</span>:<span class="path">~</span>$ <span id="typed-text" class="typed"></span><span class="cursor">▊</span></div>
+                <div class="line hero-intro">
+                    <p>> 全栈开发者 · 独立产品人 · 折腾永无止境</p>
+                    <p>> 用代码构建有趣的事物，用作品丈量世界。</p>
+                </div>
+                <div class="line hero-status">
+                    <span class="status-tag">[ SYSTEM OK ]</span>
+                    <span class="status-tag">[ CONNECTED ]</span>
+                    <span class="status-tag">[ BUILD v1.0.0 ]</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="section-header">
+            <span class="section-prefix">#</span>
+            <h2>01 — 关于我 / about</h2>
+        </div>
+        <div class="about-content">
+            <div class="code-block">
+                <div class="code-comment">// profile.json</div>
+                <div class="code-line">{</div>
+                <div class="code-line">&nbsp;&nbsp;<span class="code-key">"role"</span>: <span class="code-string">"全栈开发者"</span>,</div>
+                <div class="code-line">&nbsp;&nbsp;<span class="code-key">"location"</span>: <span class="code-string">"China"</span>,</div>
+                <div class="code-line">&nbsp;&nbsp;<span class="code-key">"interests"</span>: [<span class="code-string">"独立产品"</span>, <span class="code-string">"Web开发"</span>, <span class="code-string">"桌面应用"</span>, <span class="code-string">"小程序"</span>, <span class="code-string">"技术写作"</span>, <span class="code-string">"开源教程"</span>],</div>
+                <div class="code-line">&nbsp;&nbsp;<span class="code-key">"philosophy"</span>: <span class="code-string">"先跑通，再优化"</span>,</div>
+                <div class="code-line">&nbsp;&nbsp;<span class="code-key">"status"</span>: <span class="code-bool">true</span></div>
+                <div class="code-line">}</div>
+            </div>
+            <p class="about-text">
+                欢迎来到我的数字角落。我热爱从零到一构建产品，享受从构思、设计到上线的完整流程。
+                这里记录着我走过的每一步——从海外独立网站到桌面工具，从微信小程序到轻量 Web 应用。
+                每一个项目都是一次探索，每一行代码都是一次思考。
+            </p>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="section-header">
+            <span class="section-prefix">#</span>
+            <h2>02 — 项目作品 / projects</h2>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" data-type="web">
+                <div class="project-header">
+                    <span class="project-tag tag-web">WEB</span>
+                    <span class="project-status status-active">● 在线运行</span>
+                </div>
+                <h3 class="project-title">海外独立网站 · Site A</h3>
+                <p class="project-desc">已部署的海外独立网站项目，面向全球用户。</p>
+                <div class="project-meta">
+                    <span class="meta-item">🌐 海外部署</span>
+                    <span class="meta-item">🚀 独立运营</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://www.nanobananatests.online/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-action="visit">
+                        <span>$</span> open_site
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card" data-type="web">
+                <div class="project-header">
+                    <span class="project-tag tag-web">WEB</span>
+                    <span class="project-status status-archived">○ 已停止维护</span>
+                </div>
+                <h3 class="project-title">海外独立网站 · Site B</h3>
+                <p class="project-desc">另一个已部署的海外独立网站，数据库已不可用，项目已归档。</p>
+                <div class="project-meta">
+                    <span class="meta-item">📦 项目归档</span>
+                    <span class="meta-item">💾 DB不可用</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://imagebackgroundremoverhc.online/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-action="visit">
+                        <span>$</span> view_archive
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card" data-type="desktop">
+                <div class="project-header">
+                    <span class="project-tag tag-desktop">DESKTOP</span>
+                    <span class="project-status status-active">● 可下载</span>
+                </div>
+                <h3 class="project-title">桌面端录屏工具</h3>
+                <p class="project-desc">基于 WebCoding 开发的轻量级桌面录屏应用，简单好用。</p>
+                <div class="project-meta">
+                    <span class="meta-item">💻 桌面端</span>
+                    <span class="meta-item">🎬 屏幕录制</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/huangtietuo/VisionFocus" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-action="download">
+                        <span>$</span> download.exe
+                    </a>
+                    <a href="https://github.com/huangtietuo/VisionFocus" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-action="guide">
+                        <span>$</span> install_guide
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card" data-type="miniapp">
+                <div class="project-header">
+                    <span class="project-tag tag-miniapp">小程序</span>
+                    <span class="project-status status-active">● 微信上线</span>
+                </div>
+                <h3 class="project-title">微信小程序 · 哲芯小筑</h3>
+                <p class="project-desc">已发布上线的微信小程序，扫码即可体验。</p>
+                <div class="project-meta">
+                    <span class="meta-item">📱 微信生态</span>
+                    <span class="meta-item">📲 扫码即用</span>
+                </div>
+                <div class="project-actions">
+                    <button class="btn btn-primary" data-action="qrcode">
+                        <span>$</span> show_qrcode
+                    </button>
+                </div>
+            </div>
+
+            <div class="project-card" data-type="web">
+                <div class="project-header">
+                    <span class="project-tag tag-finance">WEB</span>
+                    <span class="project-status status-active">● 在线使用</span>
+                </div>
+                <h3 class="project-title">轻量化网页版记账工具</h3>
+                <p class="project-desc">简洁高效的在线记账应用，无需安装，浏览器直连。</p>
+                <div class="project-meta">
+                    <span class="meta-item">💰 轻量记账</span>
+                    <span class="meta-item">📊 数据可视化</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/huangtietuo/smart-inventory-ledger" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-action="visit">
+                        <span>$</span> launch_app
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card" data-type="edu">
+                <div class="project-header">
+                    <span class="project-tag tag-edu">教程</span>
+                    <span class="project-status status-active">● 在线阅读</span>
+                </div>
+                <h3 class="project-title">Hello GPU · 图解教材</h3>
+                <p class="project-desc">看懂 GPU 算子优化：从一道加法题到 LLM 解码实战。20章白话图解，RX 9070 XT + ROCm 实测数据，Agent 自动优化闭环。</p>
+                <div class="project-meta">
+                    <span class="meta-item">📗 20章全</span>
+                    <span class="meta-item">🖥️ GPU/ROCm</span>
+                    <span class="meta-item">🤖 Agent优化</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://huangtietuo.github.io/hello-gpu-illustrated/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-action="visit">
+                        <span>$</span> read_now
+                    </a>
+                    <a href="https://github.com/huangtietuo/hello-gpu-illustrated" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-action="source">
+                        <span>$</span> view_source
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card" data-type="edu">
+                <div class="project-header">
+                    <span class="project-tag tag-edu">教程</span>
+                    <span class="project-status status-active">● 在线阅读</span>
+                </div>
+                <h3 class="project-title">AI 论文提效 · 可视化教程</h3>
+                <p class="project-desc">从选题到发表全流程 AI 工作流。9大章节、40+实用工具、3条AI合规红线、1个Agent论文复现实战，全程免费阅读。</p>
+                <div class="project-meta">
+                    <span class="meta-item">🎓 9章全</span>
+                    <span class="meta-item">🛠️ 40+工具</span>
+                    <span class="meta-item">🤖 Agent实战</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://huangtietuo.github.io/ai-paper-guide/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-action="visit">
+                        <span>$</span> read_now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="section-header">
+            <span class="section-prefix">#</span>
+            <h2>03 — 技能栈 / skills</h2>
+        </div>
+
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3 class="skill-title">$ ls -la frontend/</h3>
+                <div class="skill-list">
+                    <span class="skill-chip">HTML5</span>
+                    <span class="skill-chip">CSS3 / SCSS</span>
+                    <span class="skill-chip">JavaScript</span>
+                    <span class="skill-chip">Vue / React</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="skill-title">$ ls -la backend/</h3>
+                <div class="skill-list">
+                    <span class="skill-chip">Node.js</span>
+                    <span class="skill-chip">Python</span>
+                    <span class="skill-chip">数据库设计</span>
+                    <span class="skill-chip">RESTful API</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="skill-title">$ ls -la product/</h3>
+                <div class="skill-list">
+                    <span class="skill-chip">产品设计</span>
+                    <span class="skill-chip">微信小程序</span>
+                    <span class="skill-chip">桌面应用</span>
+                    <span class="skill-chip">独立运营</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="skill-title">$ ls -la tools/</h3>
+                <div class="skill-list">
+                    <span class="skill-chip">Git / GitHub</span>
+                    <span class="skill-chip">WebCoding</span>
+                    <span class="skill-chip">海外部署</span>
+                    <span class="skill-chip">MVP思维</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="skill-title">$ ls -la writing/</h3>
+                <div class="skill-list">
+                    <span class="skill-chip">技术写作</span>
+                    <span class="skill-chip">教程创作</span>
+                    <span class="skill-chip">图解可视化</span>
+                    <span class="skill-chip">开源内容</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-num" data-target="7">0</div>
+                <div class="stat-label">projects</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num" data-target="4">0</div>
+                <div class="stat-label">platforms</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num" data-target="100">0</div>
+                <div class="stat-label">commits+</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num" data-target="24">0</div>
+                <div class="stat-label">/7 online</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="section-header">
+            <span class="section-prefix">#</span>
+            <h2>04 — 联系我 / contact</h2>
+        </div>
+
+        <div class="contact-content">
+            <div class="terminal-window contact-terminal">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">connect.sh — running</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="line"><span class="prompt">geek@home</span>:<span class="path">~</span>$ ./connect.sh</div>
+                    <div class="line">> Establishing secure connection...</div>
+                    <div class="line">> Connection established ✓</div>
+                    <div class="line">> Available channels:</div>
+                    <div class="contact-channels">
+                        <div class="channel-item">
+                            <span class="channel-icon">[EMAIL]</span>
+                            <span class="channel-value">huangtietuo@gmail.com</span>
+                        </div>
+                        <div class="channel-item">
+                            <span class="channel-icon">[GITHUB]</span>
+                            <a href="https://github.com/huangtietuo" target="_blank" rel="noopener noreferrer" class="channel-value link">github.com/huangtietuo</a>
+                        </div>
+                        <div class="channel-item">
+                            <span class="channel-icon">[WECHAT]</span>
+                            <span class="channel-value">huangtietuo</span>
+                        </div>
+                        <div class="channel-item">
+                            <span class="channel-icon">[公众号]</span>
+                            <a href="#" class="channel-value link" id="officialQrcodeBtn">扫码关注公众号</a>
+                        </div>
+                    </div>
+                    <div class="line">> <span class="blink">Waiting for signal...</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <span class="footer-text">© 2026 · Built with ❤️ and ☕ · Powered by HTML/CSS/JS</span>
+            <span class="footer-cmd">$ exit</span>
+        </div>
+    </footer>
+
+    <div class="qrcode-modal" id="qrcodeModal">
+        <div class="qrcode-overlay" id="qrcodeOverlay"></div>
+        <div class="qrcode-content">
+            <button class="qrcode-close" id="qrcodeClose">
+                <span class="close-icon">×</span>
+            </button>
+            <h3 class="qrcode-title">微信小程序 · 哲芯小筑</h3>
+            <p class="qrcode-desc">使用微信扫码体验</p>
+            <div class="qrcode-image-wrapper">
+                <img src="images/miniapp-qrcode.jpg" alt="微信小程序二维码" class="qrcode-image">
+            </div>
+            <p class="qrcode-tip">扫码即可打开小程序</p>
+        </div>
+    </div>
+
+    <div class="qrcode-modal" id="officialQrcodeModal">
+        <div class="qrcode-overlay" id="officialQrcodeOverlay"></div>
+        <div class="qrcode-content">
+            <button class="qrcode-close" id="officialQrcodeClose">
+                <span class="close-icon">×</span>
+            </button>
+            <h3 class="qrcode-title">微信公众号 · 关注我</h3>
+            <p class="qrcode-desc">扫码关注公众号</p>
+            <div class="qrcode-image-wrapper">
+                <img src="images/official-qrcode.jpg" alt="微信公众号二维码" class="qrcode-image">
+            </div>
+            <p class="qrcode-tip">长按识别二维码关注</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
