@@ -49,9 +49,9 @@ const sectionObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
 
-            // 如果是项目区域，触发卡片的错落动画
-            if (entry.target.querySelector('.projects-grid')) {
-                const cards = entry.target.querySelectorAll('.project-card');
+            // 如果是技能区，触发卡片的错落动画
+            if (entry.target.querySelector('.projects-grid, .skills-grid')) {
+                const cards = entry.target.querySelectorAll('.project-card, .skill-card');
                 cards.forEach((card, index) => {
                     setTimeout(() => {
                         card.classList.add('visible');
@@ -296,8 +296,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (rect.top < window.innerHeight && rect.bottom > 0) {
                 section.classList.add('visible');
 
-                if (section.querySelector('.projects-grid')) {
-                    const cards = section.querySelectorAll('.project-card');
+                if (section.querySelector('.projects-grid, .skills-grid')) {
+                    const cards = section.querySelectorAll('.project-card, .skill-card');
                     cards.forEach((card, index) => {
                         setTimeout(() => card.classList.add('visible'), index * 100);
                     });
